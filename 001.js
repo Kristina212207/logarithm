@@ -1,15 +1,13 @@
 "use strict";
 let start = Date.now();
 let stopwatch = 0;
-let count = 0;
 for (var i = 0; i < 100000000; i++) {
   var log = Math.log(i);
-  count++;
   var finish = Date.now();
   let freezingStopwatch = stopwatch;
   stopwatch = Math.floor((finish - start) / 1000);
   if (stopwatch != freezingStopwatch) {
-    console.log(`Просчитано ${count} чисел. Прошло ${stopwatch} сек.`);
+    console.log(`Просчитано ${i} чисел. Прошло ${stopwatch} сек.`);
     console.log("=======================================================");
   }
 }
