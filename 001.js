@@ -1,7 +1,7 @@
 let start = Date.now();
 let difference = 0;
 let diff2 = 0;
-for (let i = 0; i < 10000; i++) {
+for (var i = 0; i < 10000; i++) {
   var log = Math.log(i);
   console.log(log);
   var finish = Date.now();
@@ -13,4 +13,4 @@ for (let i = 0; i < 10000; i++) {
   }
 }
 difference = (finish - start) / 1000;
-console.log(`В итоге прошло ${difference} сек`);
+console.log(`В итоге рассчитано ${i} чисел, а прошло ${difference} сек`);
